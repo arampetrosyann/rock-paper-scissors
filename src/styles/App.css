@@ -1,0 +1,15 @@
+@import "./fonts.css";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12px 29px;
+  color: rgb(245, 245, 245);
+  background: radial-gradient(circle at top, #246a97 46%, #03a89e);
+  font-family: "Noto";
+  font-size: 23px;
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.7);
+}
