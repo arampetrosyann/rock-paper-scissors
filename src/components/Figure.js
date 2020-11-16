@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     margin: props.margin,
     cursor: "pointer",
     transitionDuration: 450,
-    "&:hover &:active": {
+    "&:hover, &:active": {
       transform: "rotate(-23deg)",
     },
   }),
