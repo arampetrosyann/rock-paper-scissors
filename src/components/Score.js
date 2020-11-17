@@ -11,7 +11,6 @@ const useStyles = createUseStyles({
     borderRadius: 10,
     fontSize: props.fontSize,
     textAlign: "center",
-    textShadow: "none",
     fontFamily: "inherit",
   }),
 });

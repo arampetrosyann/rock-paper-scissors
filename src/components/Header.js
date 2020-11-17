@@ -4,12 +4,14 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   header: (props) => ({
+    height: props.height,
     color: props.textColor,
     backgroundColor: props.backgroundColor,
+    boxShadow: props.boxShadow,
     fontSize: props.size,
-    fontWeight: "bold",
+    fontWeight: props.fontWeight,
     textAlign: props.textAlign,
-    height: props.height,
+    textShadow: props.textShadow,
   }),
 });
 
@@ -18,16 +20,17 @@ export default function Header({ text, children, ...props }) {
 
   return (
     <header className={classes.header}>
-      {text}
+      {text ? <h1>{text}</h1> : null}
       {children}
     </header>
   );
 }
 
 Header.defaultProps = {
+  text: "",
   textColor: "#ffffff",
   textAlign: "left",
-  size: 45,
+  size: 30,
 };
 
 Header.propTypes = {
