@@ -6,12 +6,22 @@ const useStyles = createUseStyles({
   score: (props) => ({
     padding: [7, 13],
     color: props.color,
-    borderTop: `2px solid ${props.color}`,
-    borderBottom: `2px solid ${props.color}`,
+    borderTop: {
+      color: props.color,
+      width: 2,
+      style: "solid",
+    },
+    borderBottom: {
+      color: props.color,
+      width: 2,
+      style: "solid",
+    },
     borderRadius: 10,
-    fontSize: props.fontSize,
+    font: {
+      size: props.fontSize,
+      family: "inherit",
+    },
     textAlign: "center",
-    fontFamily: "inherit",
   }),
 });
 

@@ -8,8 +8,10 @@ const useStyles = createUseStyles({
     color: props.textColor,
     backgroundColor: props.backgroundColor,
     boxShadow: props.boxShadow,
-    fontSize: props.size,
-    fontWeight: props.fontWeight,
+    font: {
+      weight: props.fontWeight,
+      size: props.size,
+    },
     textAlign: props.textAlign,
     textShadow: props.textShadow,
   }),
