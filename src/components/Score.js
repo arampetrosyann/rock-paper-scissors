@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
     },
     borderRadius: 10,
     font: {
-      size: props.fontSize,
+      size: props.size,
       family: "inherit",
     },
     textAlign: "center",
@@ -37,7 +37,7 @@ export default function Score({ score, onClick, ...props }) {
 
 Score.defaultProps = {
   score: 0,
-  fontSize: 32,
+  size: 32,
   color: "#000",
 };
 
