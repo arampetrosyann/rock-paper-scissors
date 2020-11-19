@@ -17,24 +17,26 @@ const useStyles = createUseStyles({
   }),
 });
 
-export default function Header({ text, children, ...props }) {
+export default function Header({ heading, children, className, ...props }) {
   const classes = useStyles(props);
 
   return (
-    <header className={classes.header}>
-      {text ? <h1>{text}</h1> : null}
+    <header className={`${classes.header} ${className}`}>
+      {heading ? <h1>{heading}</h1> : null}
       {children}
     </header>
   );
 }
 
 Header.defaultProps = {
-  text: "",
+  heading: "",
   textColor: "#ffffff",
   textAlign: "left",
   size: 30,
+  className: "",
 };
 
 Header.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  heading: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  className: PropTypes.string,
 };

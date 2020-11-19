@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
@@ -11,14 +12,18 @@ const useStyles = createUseStyles({
   }),
 });
 
-export default function Main({ children, ...props }) {
+export default function Main({ children, className, ...props }) {
   const classes = useStyles(props);
 
-  return <main className={classes.main}>{children}</main>;
+  return <main className={`${classes.main} ${className}`}>{children}</main>;
 }
 
 Main.defaultProps = {
-  justifyContent: "center",
   alignItems: "center",
   padding: 0,
+  className: "",
+};
+
+Main.propTypes = {
+  className: PropTypes.string,
 };

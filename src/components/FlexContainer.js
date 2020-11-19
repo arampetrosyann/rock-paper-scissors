@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
@@ -16,8 +17,12 @@ const useStyles = createUseStyles({
   }),
 });
 
-export default function Figure({ children, ...props }) {
+export default function FlexContainer({ children, className = "", ...props }) {
   const classes = useStyles(props);
 
-  return <div className={classes.container}>{children}</div>;
+  return <div className={`${classes.container} ${className}`}>{children}</div>;
 }
+
+FlexContainer.propTypes = {
+  className: PropTypes.string,
+};

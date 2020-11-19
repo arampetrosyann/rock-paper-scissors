@@ -15,17 +15,19 @@ const useStyles = createUseStyles({
   }),
 });
 
-export default function Paragraph({ text, ...props }) {
+export default function Paragraph({ text, className, ...props }) {
   const classes = useStyles(props);
 
-  return <p className={classes.par}>{text}</p>;
+  return <p className={`${classes.par} ${className}`}>{text}</p>;
 }
 
 Paragraph.defaultProps = {
   text: "",
   margin: 0,
+  className: "",
 };
 
 Paragraph.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  className: PropTypes.string,
 };
