@@ -20,7 +20,6 @@ export default function Main({ children, className, ...props }) {
 
 Main.defaultProps = {
   alignItems: "center",
-  padding: 0,
   className: "",
 };
 
