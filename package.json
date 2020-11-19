@@ -11,7 +11,6 @@
     "react-dom": "^17.0.1",
     "react-jss": "^10.4.0",
     "react-scripts": "4.0.0",
-    "uifx": "^2.0.7",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
