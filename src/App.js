@@ -94,7 +94,7 @@ function App() {
               {isFinished && (
                 <Paragraph
                   text={`YOU ${
-                    winner === 1 ? "WIN" : winner === 2 ? "LOST" : "DRAW"
+                    winner === 1 ? "WIN" : winner === 2 ? "LOSE" : "DRAW"
                   }`}
                   padding={[5, 15]}
                   size={33}
