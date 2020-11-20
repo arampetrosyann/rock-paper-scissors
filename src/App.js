@@ -52,13 +52,13 @@ function App() {
 
     const randFigure = await roboRandPick();
 
-    const winner = calculateWinner(figure.numb, randFigure.numb);
+    const winnerNum = calculateWinner(figure.numb, randFigure.numb);
 
-    if (winner === 1) {
+    if (winnerNum === 1) {
       setScore((prevScore) => prevScore + 1);
     }
 
-    setWinner(winner);
+    setWinner(winnerNum);
     setIsFinished(true);
   };
 
